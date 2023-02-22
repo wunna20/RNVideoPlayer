@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "RNVideoPlayer",
+    "name": "Nexus",
     "slug": "RNVideoPlayer",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.wunna11.RNVideoPlayer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1d292b1a-4368-40e0-913a-a5501d3b87d2"
+      }
     }
   }
 }

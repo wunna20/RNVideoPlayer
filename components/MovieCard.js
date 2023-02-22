@@ -3,7 +3,8 @@ import { View, Alert, StyleSheet, TouchableOpacity, Text, Button } from 'react-n
 import { Card } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { Octicons } from '@expo/vector-icons'; 
 import Toast from 'react-native-toast-message';
 import { useNavigation } from "@react-navigation/native";
 import * as FileSystem from 'expo-file-system';
@@ -61,7 +62,9 @@ const MovieCard = ({ movie, onDownload, onDelete }) => {
                         <Card.Cover source={{ uri: movie.videoThumbnail }} style={styles.image} />
                         {movie.downloadUrl != null && (
                             <TouchableOpacity onPress={() => showConfirmDialog()} style={styles.absolute}>
-                                <MaterialCommunityIcons name="delete-circle" size={50} color="red" />
+                            {/* <MaterialCommunityIcons name="delete-circle" size={24} color="red" /> */}
+                                <AntDesign name="delete" size={30} color="red" />
+                                
                             </TouchableOpacity>
                         )}
                     </View>
@@ -78,6 +81,7 @@ const MovieCard = ({ movie, onDownload, onDelete }) => {
                             }
                             }>
                                 <MaterialIcons name="file-download" size={24} color="#000" />
+                                {/* <Octicons name="download" size={24} color="#000" /> */}
                             </TouchableOpacity>
                         )}
                     </Card.Actions>
